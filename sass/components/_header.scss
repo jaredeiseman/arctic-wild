@@ -92,7 +92,7 @@ header {
       }
 
       img {
-        margin: auto;
+        margin: auto 20px auto 34px;
         @include size(30px);
       }
       &:hover {

@@ -121,7 +121,7 @@ header .hero .play-button {
   }
 }
 header .hero .play-button img {
-  margin: auto;
+  margin: auto 20px auto 34px;
   height: 30px;
   width: 30px;
 }
@@ -384,7 +384,7 @@ header .explore-below:after {
 }
 
 header {
-  height: 55vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   flex-direction: column;
