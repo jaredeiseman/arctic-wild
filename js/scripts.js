@@ -7,19 +7,20 @@ $(document).ready(function() {
       $('#sub-nav').css('left', '0');
       $('#sub-nav').css('z-index', '100');
       $('#sub-nav').css('width', '100%');
-      fixed = true;
     } else {
       $('#sub-nav').css('position', 'static');
-      fixed = false;
     }
   });
 
   $('.search a').click(function(e) {
     e.preventDefault();
-    $('#search-panel').css('visibility', 'visible');
+    // $('#search-panel').css('visibility', 'visible');
+    $('#search-panel').addClass('panel-visible');
+
   });
 
-  $('#search-panel').click(function() {
+  $('.go-button').click(function() {
     // $('#search-panel').css('visibility', 'hidden');
+    $('#search-panel').removeClass('panel-visible');
   });
 });
