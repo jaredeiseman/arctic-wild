@@ -1,8 +1,47 @@
-#gallery{
-  .gallery-item{
+#gallery {
+  @include grid-container();
+  width: 100%;
+
+  .gallery-item {
     @include grid-column(12);
+    height: 30vw;
+    min-height: 220px;
     background-color: pink;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 3vw;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+
+    img {
+      margin: auto;
+      order: 1;
+    }
+
+    h3 {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+    }
+
+    @include tablet-bp {
+      height: 420px;
+      @include grid-column(6, $custom-gallery-grid);
+      margin-top: 0;
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        width: 100%;
+      }
+    }
+    @include desktop-bp {
+      @include grid-column(3, $custom-gallery-grid);
+      &:first-child {
+        width: 50%;
+      }
+      &:last-child {
+        width: 50%;
+      }
+    }
   }
 }

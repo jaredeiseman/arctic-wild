@@ -1,5 +1,40 @@
 @for $index from 1 through length($gallery-images) {
   .gallery-item:nth-child(#{$index}) {
     @include background-image(url('../img/#{nth($gallery-images, $index)}.jpg'));
+    background-size: cover;
+  }
+}
+
+#gallery {
+  background-color: $gallery-background;
+}
+
+.gallery-item {
+  img {
+    @include size(50px);
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgba($dark-grey, 0.8);
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+  h3 {
+    color: #fff;
+    font-family: $default-headings;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px black;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 50px;
+      // left: 20px;
+      background-color: $orange;
+      width: 45px;
+      height: 5px;
+    }
   }
 }

@@ -13,6 +13,8 @@ $experience-text-accent-color: #85857b;
 // light grey arrow button background for tourguides #c7c7c7
 $arrow-background: #c7c7c7;
 
+$gallery-background: #d1d1c9;
+
 //font stacks
 $default-headings: 'Fjalla One', sans-serif;
 $default-font: 'Open Sans', sans-serif;
@@ -22,4 +24,13 @@ $desktop-bp: 'screen and (min-width: 960px)';
 
 
 //gallery image list
-$gallery-images: ('home-backpacking', 'home-basecamp', 'home-canoe', 'home-custom', 'home-photo', 'home-raft');
+$gallery-images: ('home-raft', 'home-basecamp', 'home-backpacking', 'home-canoe', 'home-photo', 'home-custom');
+
+//custom grid for gallery
+$custom-gallery-grid: (
+  columns: 12,
+  gutter: 0,
+  media: 1200px,
+  color: rgba(#00d4ff, 0.25),
+  direction: ltr,
+);
