@@ -1,0 +1,129 @@
+html {
+  font-size: 120%;
+}
+
+header {
+  @include background-image(url('../img/hero-slide1.jpg'), auto, 100%);
+  color: #fff;
+
+  @include desktop-bp {
+    background-size: cover;
+  }
+
+  nav {
+
+    @include desktop-bp {
+      margin-bottom: -200px;
+    }
+
+    .logo {
+      @include background-image(url('../img/logo.svg'), 40px, 50px);
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: left;
+      padding-left: 50px;
+
+      &:hover {
+        color: $orange;
+        background-image: url('../img/logo-orange.svg');
+      }
+    }
+
+    ul {
+      display: none;
+
+      @include desktop-bp {
+        display: block;
+      }
+
+      li {
+
+        a {
+          font-family: $default-headings;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .hero {
+
+    h2 {
+      font-size: 14px;
+      font-family: $default-headings;
+      letter-spacing: 5px;
+
+      @include tablet-bp {
+        font-size: 20px;
+      }
+    }
+
+    h1 {
+      font-size: 45px;
+      letter-spacing: 3px;
+
+      @include tablet-bp {
+        font-size: 75px;
+      }
+
+      @include desktop-bp {
+        font-size: 110px;
+      }
+    }
+
+    hr {
+      margin-top: 20px;
+      width: 200px;
+      border: 2px solid white;
+    }
+
+    .play-button {
+      @include size(90px);
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      display: flex;
+      margin: 30px 0 60px;
+      transition: transform 0.3s, opacity 0.3s;
+
+      @include tablet-bp {
+        margin-bottom: 20px;
+      }
+
+      img {
+        margin: auto;
+        @include size(30px);
+      }
+      &:hover {
+        @include play-hover;
+      }
+    }
+  }
+
+  .explore-below {
+    font-family: $default-headings;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 0;
+    background-color: $orange;
+    padding: 20px 30px;
+    display: none;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 99%;
+      transform:translateX(-50%);
+      @include triangle(down, $orange, 40px, 10px);
+    }
+
+    @include desktop-bp {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.hamburger-menu {
+  @include size(35px, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    height: 2px;
+    border-radius: 2.5px;
+    width: 95%;
+    background: #fff;
+  }
+
+  @include desktop-bp {
+    display: none;
+  }
+}

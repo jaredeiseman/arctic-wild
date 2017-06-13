@@ -1,0 +1,66 @@
+#sub-nav {
+  display: none;
+
+  @include desktop-bp {
+    @include background-image(url('../img/bg-footercopyright.jpg'));
+    border-top: 1px solid $grey-accent;
+    border-bottom: 1px solid $grey-accent;
+    height: 80px;
+    display: block;
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul {
+
+    }
+
+    li {
+      display: inline-block;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+
+      &:not(:first-child) {
+        padding: 0 10px;
+      }
+
+      &:last-child {
+        border-left: 1px solid $nav-text;
+        margin-left: 20px;
+        padding-left: 30px;
+
+        a:last-child {
+          color: $orange;
+        }
+      }
+    }
+
+    a {
+      color: $nav-text;
+      font-size: 16px;
+      font-family: $default-font;
+      text-decoration: none;
+    }
+
+    .search {
+      position: relative;
+      a:after {
+        position: absolute;
+        right: -30px;
+        top: 0;
+        display: block;
+        content: "";
+        @include size(20px);
+        @include background-image(url('../img/btn-search.png'), 20px, 40px);
+      }
+    }
+  }
+}
