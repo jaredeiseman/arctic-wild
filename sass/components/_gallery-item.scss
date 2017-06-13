@@ -1,0 +1,5 @@
+@for $index from 1 through length($gallery-images) {
+  .gallery-item:nth-child(#{$index}) {
+    @include background-image(url('../img/#{nth($gallery-images, $index)}.jpg'));
+  }
+}

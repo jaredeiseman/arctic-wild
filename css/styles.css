@@ -216,6 +216,42 @@ header .explore-below:after {
   }
 }
 
+.gallery-item:nth-child(1) {
+  background-image: url("../img/home-backpacking.jpg");
+  background-size: auto auto;
+  background-position: center;
+}
+
+.gallery-item:nth-child(2) {
+  background-image: url("../img/home-basecamp.jpg");
+  background-size: auto auto;
+  background-position: center;
+}
+
+.gallery-item:nth-child(3) {
+  background-image: url("../img/home-canoe.jpg");
+  background-size: auto auto;
+  background-position: center;
+}
+
+.gallery-item:nth-child(4) {
+  background-image: url("../img/home-custom.jpg");
+  background-size: auto auto;
+  background-position: center;
+}
+
+.gallery-item:nth-child(5) {
+  background-image: url("../img/home-photo.jpg");
+  background-size: auto auto;
+  background-position: center;
+}
+
+.gallery-item:nth-child(6) {
+  background-image: url("../img/home-raft.jpg");
+  background-size: auto auto;
+  background-position: center;
+}
+
 header {
   height: 55vh;
   width: 100%;
@@ -260,6 +296,15 @@ header .hero {
 }
 header button {
   margin-bottom: 50px;
+}
+
+#gallery .gallery-item {
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px;
+  background-color: pink;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
