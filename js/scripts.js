@@ -13,4 +13,13 @@ $(document).ready(function() {
       fixed = false;
     }
   });
+
+  $('.search a').click(function(e) {
+    e.preventDefault();
+    $('#search-panel').css('visibility', 'visible');
+  });
+
+  $('#search-panel').click(function() {
+    // $('#search-panel').css('visibility', 'hidden');
+  });
 });
