@@ -7,6 +7,18 @@
   border: 0;
   background-color: $orange;
   padding: 20px 30px;
+  transition: background-color .3s;
+  cursor: pointer;
 
+  &:after {
+    transition: border-top-color .3s;
+  }
 
+  &:hover {
+    background-color: lighten($orange, 15%);
+  }
+
+  &:hover:after {
+    border-top-color: lighten($orange, 15%);
+  }
 }

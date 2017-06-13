@@ -1,4 +1,4 @@
-header .explore-below, #search-panel button {
+header .explore-below, #search-panel button, #experience .container .content button {
   font-family: "Fjalla One", sans-serif;
   font-size: 16px;
   color: white;
@@ -7,11 +7,27 @@ header .explore-below, #search-panel button {
   border: 0;
   background-color: #dc7725;
   padding: 20px 30px;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+header .explore-below:after, #search-panel button:after, #experience .container .content button:after {
+  transition: border-top-color .3s;
+}
+header .explore-below:hover, #search-panel button:hover, #experience .container .content button:hover {
+  background-color: #e7a067;
+}
+header .explore-below:hover:after, #search-panel button:hover:after, #experience .container .content button:hover:after {
+  border-top-color: #e7a067;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #e6e6e0;
 }
 
 html {
@@ -363,6 +379,10 @@ header .explore-below:after {
   font-family: "Fjalla One", sans-serif;
 }
 
+#experience {
+  border-bottom: 1px solid #272726;
+}
+
 header {
   height: 55vh;
   width: 100%;
@@ -464,6 +484,89 @@ header button {
   }
   #gallery .gallery-item:last-child {
     width: 50%;
+  }
+}
+
+#experience {
+  background-color: #e6e6e0;
+}
+#experience .container {
+  display: flex;
+  width: 80%;
+  max-height: 800px;
+  margin: 0 auto;
+  align-items: flex-start;
+  text-align: center;
+}
+@media screen and (min-width: 960px) {
+  #experience .container {
+    text-align: left;
+  }
+}
+#experience .container .content {
+  min-width: 40%;
+  min-height: 800px;
+  margin-right: 20px;
+  color: #5b5b59;
+}
+#experience .container .content h3 {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: "Fjalla One", sans-serif;
+  color: #85857b;
+}
+#experience .container .content h2 {
+  font-size: 50px;
+  margin-bottom: 35px;
+  color: #343433;
+}
+#experience .container .content hr {
+  width: 100px;
+  border: 2.5px solid #cececb;
+  margin: 0 auto 35px;
+}
+@media screen and (min-width: 960px) {
+  #experience .container .content hr {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+#experience .container .content p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 35px;
+}
+#experience .container .content a.inline {
+  color: #dc7725;
+  text-decoration: none;
+  transition: color .1s;
+}
+#experience .container .content a.inline:hover {
+  color: #e7a067;
+}
+#experience .container .content button {
+  margin-right: 20px;
+}
+#experience .container .content .call-out {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  color: #343433;
+  border-bottom: 1px dashed #85857b;
+}
+#experience .container .content .call-out:hover {
+  color: #dc7725;
+}
+#experience .container .img {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  #experience .container .img {
+    display: block;
+    max-height: 1000px;
+  }
+  #experience .container .img img {
+    float: left;
   }
 }
 

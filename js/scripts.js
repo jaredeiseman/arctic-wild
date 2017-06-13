@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(window).on('scroll', function() {
+  function fixNavbar() {
     var topOffset = $(document).scrollTop();
     if (topOffset >= $(window).height()) {
       $('#sub-nav').css('position', 'fixed');
@@ -10,7 +10,11 @@ $(document).ready(function() {
     } else {
       $('#sub-nav').css('position', 'static');
     }
+  }
+  $(window).on('scroll', function() {
+    fixNavbar();
   });
+  fixNavbar();
 
   $('.search a').click(function(e) {
     e.preventDefault();
